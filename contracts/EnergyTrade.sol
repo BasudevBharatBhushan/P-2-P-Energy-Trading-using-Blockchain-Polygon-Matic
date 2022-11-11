@@ -144,7 +144,7 @@ contract EnergyTrade is Energy_Token, PriceConverter {
     }
 
     modifier isProsumer() {
-        require(prosumerID[msg.sender] <= prosumerCounter, "Sender is not Prosumer");
+        require(prosumerID[msg.sender] == 0, "Sender is not Prosumer");
         _;
     }
 }
